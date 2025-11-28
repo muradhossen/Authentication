@@ -7,11 +7,11 @@ namespace Authentication.Controllers;
 public class ProductController : BaseApiController
 {
     [Authorize(Policy = "ProductFullAccess")]
-    [HttpPost("create")]
+    [HttpPost]
     public IActionResult CreateProduct() => Ok("Created");
 
     [Authorize(Policy = "ProductEditAccess")]
-    [HttpPut("update/{id}")]
+    [HttpPut]
     public IActionResult Update(int id) => Ok("Updated");
 
     [Authorize(Policy = "ProductReadAccess")]
