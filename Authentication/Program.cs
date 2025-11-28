@@ -1,4 +1,5 @@
 using Application;
+using Application.Extensions;
 using Application.Seed;
 using Domain.Entities.Account;
 using Infrastructure;
@@ -49,6 +50,8 @@ var roleManager = services.GetRequiredService<RoleManager<Role>>();
 await context.Database.MigrateAsync();
 await RoleSeed.SeedUsers(roleManager);
 #endregion
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 if (app.Environment.IsDevelopment())
 {
