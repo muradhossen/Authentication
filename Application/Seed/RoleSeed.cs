@@ -18,9 +18,9 @@ public class RoleSeed
 
         var roles = new List<Role>
             {
-                new() { Name = "Customer" },
-                new() { Name = "Admin" },
-                new() { Name = "Moderator" }
+                new() { Name = Roles.Customer },
+                new() { Name = Roles.Admin },
+                new() { Name = Roles.Moderator }
             };
 
         foreach (var role in roles)
