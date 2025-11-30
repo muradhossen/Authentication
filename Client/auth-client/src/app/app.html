@@ -1,0 +1,16 @@
+ 
+
+@if (isAuthenticated()) {
+   <h1>Welcome to Authentication!</h1>
+   <h2>
+      You are in the Authentication Module.
+   </h2>
+
+   <button (click)="logout()">Logout</button>
+}
+
+<router-outlet />
+ 
+ 
+
+
